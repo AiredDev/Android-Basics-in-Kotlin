@@ -2,7 +2,7 @@ package com.example.dieroller
 
 import android.os.Bundle
 import android.widget.Button
-import android.widget.TextView
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -12,22 +12,29 @@ class MainActivity : AppCompatActivity() {
 
         val rollButton: Button = findViewById(R.id.button)
 
-        val die = Die(6)
-        val die2 = Die(6)
-
-        val dieTextView: TextView = findViewById(R.id.textView)
-        val die2TextView: TextView = findViewById(R.id.textView2)
-
         rollButton.setOnClickListener {
-            rollDie(die, dieTextView)
-            rollDie(die2, die2TextView)
+            rollDie(findViewById(R.id.imageView))
+            rollDie(findViewById(R.id.imageView2))
         }
+
+        rollDie(findViewById(R.id.imageView))
+        rollDie(findViewById(R.id.imageView2))
     }
 
-    private fun rollDie(die: Die, resultTextView: TextView) {
+    private fun rollDie(img: ImageView) {
+        val die = Die(6)
         val dieRoll = die.roll()
 
-        resultTextView.text = dieRoll.toString()
+        val drawableResource = when (dieRoll) {
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            else -> R.drawable.dice_6
+        }
+        img.setImageResource(drawableResource)
+        img.contentDescription = dieRoll.toString()
     }
 }
 

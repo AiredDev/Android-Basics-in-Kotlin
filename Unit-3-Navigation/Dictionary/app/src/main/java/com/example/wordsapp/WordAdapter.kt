@@ -90,6 +90,7 @@ class WordAdapter(private val letterId: String, context: Context) :
             context.startActivity(intent)
         }
     }
+
     // Setup custom accessibility delegate to set the text read with
     // an accessibility service
     companion object Accessibility : View.AccessibilityDelegate() {

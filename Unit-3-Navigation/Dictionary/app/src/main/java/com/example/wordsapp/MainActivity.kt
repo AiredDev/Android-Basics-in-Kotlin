@@ -48,8 +48,7 @@ class MainActivity : AppCompatActivity() {
     private fun chooseLayout() {
         if (isLinearLayoutManager) {
             recyclerView.layoutManager = LinearLayoutManager(this)
-        }
-        else {
+        } else {
             recyclerView.layoutManager = GridLayoutManager(this, 4)
         }
         recyclerView.adapter = LetterAdapter()

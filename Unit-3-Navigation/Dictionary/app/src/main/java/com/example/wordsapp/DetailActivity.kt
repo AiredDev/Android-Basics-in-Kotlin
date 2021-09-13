@@ -25,7 +25,7 @@ import com.example.wordsapp.databinding.ActivityDetailBinding
 class DetailActivity : AppCompatActivity() {
     companion object {
         const val LETTER = "letter"
-        const val SEARCH_PREFIX = "https://duckduckgo.com/?q="
+        const val SEARCH_PREFIX = "https://duckduckgo.com/?q=define "
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

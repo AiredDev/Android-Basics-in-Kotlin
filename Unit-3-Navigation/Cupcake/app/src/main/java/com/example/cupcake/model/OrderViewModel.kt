@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import java.lang.NumberFormatException
 import java.text.NumberFormat
 import java.text.SimpleDateFormat
 import java.util.*

@@ -83,3 +83,6 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+
+# I didn't write or modify this app so it would be pointless to push
+Unit-5-Data-Persistence/DatabaseExample/
